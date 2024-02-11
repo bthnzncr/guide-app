@@ -1,0 +1,52 @@
+<!-- dialog_add_comment.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pop_up"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5100E0E"
+    android:orientation="vertical"
+    android:padding="24dp"
+
+    android:textColorPrimary="@color/black"
+    android:windowBackground="@color/black" >
+
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Nickname"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FAF7F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="347dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#F5100E0E"
+        android:hint="Review"
+        android:textColor="#FDFDFD"
+        android:textColorHighlight="#F8F0F0"
+        android:textColorHint="#F6F3F3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="124dp"
+        android:numStars="5"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

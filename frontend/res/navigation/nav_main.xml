@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/fragmentListOpSys"
+        android:name="com.example.guideapp.PlaceList"
+
+        tools:layout="@layout/fragment_list_op_sys">
+        <action
+            android:id="@+id/action_fragmentListOpSys_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.guideapp.FragmentDetails"
+
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_fragmentDetails_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.guideapp.FirstFragment"
+        tools:layout="@layout/first_fragment"
+        android:label="Choose Your District!">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentListOpSys"
+            app:destination="@id/fragmentListOpSys" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.guideapp.CommentFragment"
+        android:label="fragment_comment_label"
+        tools:layout="@layout/comments_recycler_view" >
+
+
+    </fragment>
+
+
+
+</navigation>
